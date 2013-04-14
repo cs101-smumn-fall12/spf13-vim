@@ -1,0 +1,49 @@
+
+compl to behave like supertab
+" imap  <silent><expr><tab>  neocomplcache#sources#snippets_complete#expandable() ? "\<plug>(neocomplcache_snippets_expand)" : (pumvisible() ? "\<c-e>" : "\<tab>")
+" map  <tab>  <right><plug>(neocomplcache_snippets_jump) 
+" inoremap <expr><c-e>     neocomplcache#complete_common_string()
+
+" Escape is now kj
+    inoremap kj <Esc>
+        
+"Toggle Nerd Tree like a panel
+    map <Leader>nt <plug>NERDTreeTabsToggle<CR>
+
+"Nerd Tree will not open on startup
+    let g:nerdtree_tabs_open_on_gui_startup=0
+
+" Jump to the definition of whatever the cursor is on
+"    map <leader>j :RopeGotoDefinition<CR>
+
+" Rename whatever the cursor is on (including references to it)
+"    map <leader>r :RopeRename<CR>
+
+
+"let g:neocomplcache_dictionary_filetype_lists = {
+"  \ 'default': '',
+"  \ 'python': '~/.vim/bundle/Pydiction/complete-dict'
+"  \ }
+
+
+set bg=dark
+let g:molokai_original = 1
+set t_Co=256
+colorscheme molokai
+
+if has('gui_running')
+    if has("gui_gtk2")
+        set guifont= Consolas\ Regular\ 11,Andale\ Mono\ Regular\ 11,Menlo\ Regular\ 10,Courier\ New\ Regular\ 13
+    else
+         colorscheme torte
+         set guifont = Consolas\ Regular:h14,Andale\ Mono\ Regular:h14,Menlo\ Regular:h13,Courier\ New\ Regular:h16
+    endif
+    if has('gui_macvim')
+        set transparency=2          " Make the window slightly transparent
+    endif
+endif
+
+
+set autoread                    " automatically reads, helpful when VCS may have changed the file
+
+

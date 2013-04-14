@@ -1,0 +1,29 @@
+f !exists("g:spf13_bundle_groups")
+    let g:spf13_bundle_groups=['general', 'programming', 'python']
+endif
+
+" General Completion
+            Bundle 'ervandew/supertab'
+" Python
+            Bundle 'fisadev/vim-debug.vim'
+            Bundle 'yardsale8/Pydiction'
+            Bundle 'davidhalter/jedi-vim'
+
+" Clojure
+            Bundle 'vim-scripts/slimv.vim'
+
+
+
+" Color schemes
+            Bundle 'Color-Sampler-Pack'
+            Bundle 'ScrollColors'
+            Bundle 'tomasr/molokai'
+
+
+" Programming
+            Bundle 'rosenfeld/conque-term'
+
+" General
+            Bundle 'vim-scripts/YankRing.vim'
+            Bundle 'kien/tabman.vim'
+
